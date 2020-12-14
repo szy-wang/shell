@@ -1,0 +1,39 @@
+#!/bin/bash
+#Description: wvim scripts
+#Auth: Wang
+#Date: 2020-12-15 6:45
+#Version: 1.0
+
+#parameter is not exist
+[ $# -eq 0 ] && echo "Please input at least one paremeter: wvim filename" && exit 1
+
+#init wvim
+initWvim(){
+	[ ! -f /usr/local/bin/wvim ] && cp ./wvim /usr/local/bin/wvim && chmod u+x /usr/local/bin/wvim
+}
+
+#init shell file
+initShellFile(){
+	cat > $1 << EOF
+#!/bin/bash
+#Description: $1 scripts
+#Auth: Wang
+#Date: $(date +%F" "%H:%M)
+#Version: 1.0
+EOF
+}
+
+#exist file
+initFile(){
+	if [ -f $1 ] ;then
+		vim $1 && exit 0
+	else
+		touch $1 && initShellFile $1 && vim $1 && exit 0
+	fi
+}
+
+main(){
+	initWvim
+	initFile $1	
+}
+main $1
