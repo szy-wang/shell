@@ -1,0 +1,79 @@
+[oracle@server workspace]$ pwd
+/home/oracle/instance/workspace
+[oracle@server workspace]$ ss -ntl
+State      Recv-Q Send-Q                       Local Address:Port                                      Peer Address:Port
+LISTEN     0      5                            192.168.122.1:53                                                   *:*
+LISTEN     0      128                                      *:22                                                   *:*
+LISTEN     0      128                              127.0.0.1:631                                                  *:*
+LISTEN     0      100                              127.0.0.1:25                                                   *:*
+LISTEN     0      128                              127.0.0.1:6010                                                 *:*
+LISTEN     0      128                              127.0.0.1:6011                                                 *:*
+LISTEN     0      128                                      *:111                                                  *:*
+LISTEN     0      128                                   [::]:1521                                              [::]:*
+LISTEN     0      128                                   [::]:22                                                [::]:*
+LISTEN     0      128                                  [::1]:631                                               [::]:*
+LISTEN     0      100                                  [::1]:25                                                [::]:*
+LISTEN     0      128                                  [::1]:6010                                              [::]:*
+LISTEN     0      128                                  [::1]:6011                                              [::]:*
+LISTEN     0      128                                   [::]:25678                                             [::]:*
+LISTEN     0      128                                   [::]:111                                               [::]:*
+[oracle@server workspace]$ sh start_hsfa.sh
+[oracle@server workspace]$
+AppName:[ora11g] AppID:[0] SvrName:[mainsvr]
+Plugin[com.hundsun.fbase.log] loaded(Ver=20090303,Oct 18 2016 23:53:32).
+Plugin[com.hundsun.fbase.bizlog] loaded(Ver=20090303,Oct 18 2016 23:53:32).
+Plugin[com.hundsun.fbase.config] loaded(Ver=20070704,Mar 23 2017 14:37:15).
+Plugin[com.hundsun.fbase.f2packsvr] loaded(Ver=20101207,Dec 19 2016 17:48:25).
+get shm successed!
+Plugin[com.hundsun.fbase.daemon] loaded(Ver=20080325,Jan  7 2016 13:04:50).
+[2959]Plugin[com.hundsun.fbase.bizlog] init ...done!
+[2959]Plugin[com.hundsun.fbase.config] init ...done!
+[2959]Plugin[com.hundsun.fbase.daemon] init ...done!
+[2959]Plugin[com.hundsun.fbase.f2packsvr] init ...done!
+[2959]Plugin[com.hundsun.fbase.log] init ...done!
+Plugin[t2] loaded(Ver=20090908,Dec 13 2016 01:03:44).
+Plugin[com.hundsun.fbase.security] loaded(Ver=20071119,Dec 13 2016 00:32:15).
+Plugin[mproxy] loaded(Ver=20080302,Jun 20 2014 19:44:09).
+Plugin[com.hundsun.fbase.esbmessagefactory] loaded(Ver=20090108,May 11 2016 09:20:31).
+Plugin[filter_log] loaded(Ver=20090107,Oct 24 2016 21:22:01).
+Plugin[router] loaded(Ver=20090526,Oct 31 2016 18:49:28).
+Plugin[ospf] loaded(Ver=20081114,Dec 23 2015 15:55:41).
+Plugin[f2] loaded(Ver=20081121,Aug  2 2016 17:00:32).
+Plugin[proc] loaded(Ver=20081119,Nov 21 2016 19:19:25).
+Plugin[com.hundsun.fbase.gzdb] loaded(Ver=20140609,Aug 13 2018 15:21:43).
+[2959]Plugin[com.hundsun.fbase.esbmessagefactory] init ...done!
+[2959]Plugin[com.hundsun.fbase.security] init ...done!
+[2959]Plugin[com.hundsun.fbase.gzdb] init ...done!
+[2959]Plugin[f2] init ...done!
+[2959]Plugin[filter_log] init ...done!
+[2959]Plugin[mproxy] init ...done!
+[2959]Plugin[router] init ...
+******** Router Thread num is: 8*************
+done!
+[2959]Plugin[ospf] init ...done!
+[2959]Plugin[proc] init ...done!
+[2959]Plugin[t2] init ...T2:safelevel=[none] done!
+Plugin[hsfa.dataservice] loaded(Ver=20140310,Aug 13 2018 15:27:10).
+[2959]Plugin[hsfa.dataservice] init ...done!
+[2959]ProcSysEvent[MSG_START] begin ... get shm successed!
+get shm successed!
+T2:[EPOLL]  end!
+[ora11g-mainsvr-0] STARTED
+
+State      Recv-Q Send-Q Local Address:Port               Peer Address:Port              
+LISTEN     0      5      192.168.122.1:53                       *:*                  
+LISTEN     0      128          *:22                       *:*                  
+LISTEN     0      128    127.0.0.1:631                      *:*                  
+LISTEN     0      100    127.0.0.1:25                       *:*                  
+LISTEN     0      128    127.0.0.1:6010                     *:*                  
+LISTEN     0      128    127.0.0.1:6011                     *:*                  
+LISTEN     0      128          *:111                      *:*                  
+LISTEN     0      100          *:9008                     *:*                  
+LISTEN     0      128       [::]:1521                  [::]:*                  
+LISTEN     0      128       [::]:22                    [::]:*                  
+LISTEN     0      128      [::1]:631                   [::]:*                  
+LISTEN     0      100      [::1]:25                    [::]:*                  
+LISTEN     0      128      [::1]:6010                  [::]:*                  
+LISTEN     0      128      [::1]:6011                  [::]:*                  
+LISTEN     0      128       [::]:25678                 [::]:*                  
+LISTEN     0      128       [::]:111                   [::]:*                  
